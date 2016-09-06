@@ -5,8 +5,18 @@ var express = require('express'),
 
 var app = express();
 
+
+var Person = function (name) {
+    this._name = name;
+};
+
+Person.prototype.sayHello = function () {
+    return 'My name is: ' + this._name;
+};
+
 app.get('/', function (req, res) {
-  res.send('Hello World!');
+  var john = new Person('John');
+  res.send('Hello World!' + john.sayHello());
 });
 
 
