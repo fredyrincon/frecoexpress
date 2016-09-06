@@ -17,7 +17,8 @@ Person.prototype.sayHello = function () {
 app.get('/', function (req, res) {
   var fredy = new Person('Fredy Rincon');
   //res.send('Hello ' + fredy.sayHello());
-  res.send(JSON.stringify({ a: 1 }));
+  //res.send(JSON.stringify({ a: 1 }));
+  res.send(JSON.stringify(fredy));
 });
 
 
