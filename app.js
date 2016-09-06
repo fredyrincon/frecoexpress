@@ -6,16 +6,18 @@ var express = require('express'),
 var app = express();
 
 
-var Person = function (name) {
-    this._name = name;
+var Person = function (pName, pJob, pCompany) {
+    this.name = pName;
+    this.job= pJob;
+    this.company = pCompany;
 };
 
 Person.prototype.sayHello = function () {
-    return 'My name is: ' + this._name;
+    return 'My name is: ' + this.name;
 };
 
 app.get('/', function (req, res) {
-  var fredy = new Person('Fredy Rincon');
+  var fredy = new Person('Fredy Rincon', 'Mobile Developer', 'HCX');
   //res.send('Hello ' + fredy.sayHello());
   //res.send(JSON.stringify({ a: 1 }));
   res.send(JSON.stringify(fredy));
