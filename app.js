@@ -15,8 +15,8 @@ Person.prototype.sayHello = function () {
 };
 
 app.get('/', function (req, res) {
-  var john = new Person('John');
-  res.send('Hello World!' + john.sayHello());
+  var fredy = new Person('Fredy Rincon');
+  res.send('Hello ' + fredy.sayHello());
 });
 
 
