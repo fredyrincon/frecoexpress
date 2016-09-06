@@ -17,7 +17,7 @@ Person.prototype.sayHello = function () {
 };
 
 var Reminder = function (pId) {
-    this.reminderId = 'This is the id of reminder' + pId;
+    this.reminderId = 'This is the id of reminder ' + pId;
 };
 
 
