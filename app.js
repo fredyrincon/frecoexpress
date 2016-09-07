@@ -20,6 +20,12 @@ var Reminder = function (pId) {
     this.reminderId = 'This is the id of reminder ' + pId;
 };
 
+var Repository = function (pName, pOpenIssues, pWatchers) {
+    this.name = pName;
+    this.openIssues= pOpenIssues;
+    this.watchers = pWatchers;
+};
+
 
 app.get('/', function (req, res) {
   var fredy = new Person('Fredy Rincon', 'Mobile Developer', 'HCX');
@@ -35,6 +41,13 @@ app.get('/reminder/:id', function (req, res, next) {
   });*/
   var each = new Reminder(req.params.id);
   res.json(each);
+});
+
+app.get('/users/fredyrincon/repos', function (req, res, next) {
+  var myArray = new Array();
+  myArray.push(new Repository("repo1","repo1","repo1"));
+  myArray.push(new Repository("repo2","repo2","repo2"));
+  res.json(myArray);
 });
 
 
