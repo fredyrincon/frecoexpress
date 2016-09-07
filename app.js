@@ -45,8 +45,8 @@ app.get('/reminder/:id', function (req, res, next) {
 
 app.get('/users/fredyrincon/repos', function (req, res, next) {
   var myArray = new Array();
-  myArray.push(new Repository("repo1","repo1","repo1"));
-  myArray.push(new Repository("repo2","repo2","repo2"));
+  myArray.push(new Repository("repo1",1,1));
+  myArray.push(new Repository("repo2",34,67));
   res.json(myArray);
 });
 
